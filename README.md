@@ -1,6 +1,6 @@
 # File Type Changer 📄
 
-[![Live Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/SheikhAbdullah1/File-Type-Changer/main/streamlit_app.py)
+[![Live Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://file-type-changer.streamlit.app)
 
 Batch convert Word and PowerPoint files to PDF, DOCX, PPTX — free, no installation needed.
 
@@ -8,7 +8,7 @@ Batch convert Word and PowerPoint files to PDF, DOCX, PPTX — free, no installa
 
 ## 🚀 Live Demo
 
-👉 **[Click here to use the app](https://share.streamlit.io/SheikhAbdullah1/File-Type-Changer/main/streamlit_app.py)**
+👉 **[Click here to use the app](https://file-type-changer.streamlit.app)**
 
 ---
 
