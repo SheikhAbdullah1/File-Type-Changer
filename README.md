@@ -33,8 +33,8 @@ Batch convert Word and PowerPoint files to PDF, DOCX, PPTX and more — with a c
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/file-changer.git
-cd file-changer
+git clone https://github.com/SheikhAbdullah1/File-Type-Changer.git
+cd File-Type-Changer
 
 # 2. Create virtual environment
 python -m venv .venv
@@ -63,7 +63,7 @@ The `.exe` will be in the `dist/` folder. No Python required on the target machi
 ## Project Structure
 
 ```
-file-changer/
+File-Type-Changer/
 ├── app.py            # UI — CustomTkinter window, layout, events
 ├── converter.py      # Core logic — Office COM automation + security checks
 ├── main.py           # Entry point
