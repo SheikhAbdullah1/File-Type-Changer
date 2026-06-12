@@ -1,62 +1,45 @@
-# File Changer 📄
+# File Type Changer 📄
 
-Batch convert Word and PowerPoint files to PDF, DOCX, PPTX and more — with a clean desktop UI.
+[![Live Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/SheikhAbdullah1/File-Type-Changer/main/streamlit_app.py)
+
+Batch convert Word and PowerPoint files to PDF, DOCX, PPTX — free, no installation needed.
+
+---
+
+## 🚀 Live Demo
+
+👉 **[Click here to use the app](https://share.streamlit.io/SheikhAbdullah1/File-Type-Changer/main/streamlit_app.py)**
 
 ---
 
 ## Features
 
 - Convert `.doc`, `.docx`, `.ppt`, `.pptx`, `.pps`, `.ppsx` files
-- Output formats: PDF, Word (docx/doc), PowerPoint (pptx/ppt)
-- Batch conversion with live progress bar and activity log
-- Color-coded log: OK (green), skipped (amber), errors (red)
-- Cancel mid-conversion
-- Dark / Light theme toggle
+- Output formats: PDF, Word (docx), PowerPoint (pptx)
+- Batch conversion — download all as ZIP
+- Files processed in memory, never stored on server
+- Dark UI, mobile friendly
 
 ## Security
 
-- **Macros disabled** — Word and PowerPoint macros are force-disabled during conversion
-- **Magic byte validation** — files are checked against their real format signature, not just extension
-- **File size limit** — files over 100 MB are rejected
-- **Path traversal protection** — symlink and `..` attacks are blocked
-- **Read-only open** — source files are never modified
+- **Magic byte validation** — real format check, not just extension
+- **File size limit** — 50 MB max per file
+- **In-memory processing** — files deleted after conversion
+- **No storage** — nothing saved on server
 
 ---
 
-## Requirements
-
-- Windows 10 / 11
-- Microsoft Office installed (Word + PowerPoint)
-- Python 3.10+
-
-## Installation
+## Run Locally
 
 ```bash
-# 1. Clone the repo
 git clone https://github.com/SheikhAbdullah1/File-Type-Changer.git
 cd File-Type-Changer
 
-# 2. Create virtual environment
-python -m venv .venv
-.venv\Scripts\activate
-
-# 3. Install dependencies
 pip install -r requirements.txt
-
-# 4. Run the app
-python main.py
+streamlit run streamlit_app.py
 ```
 
-Or just double-click **`launch.bat`** after setup.
-
-## Build a standalone .exe
-
-```bash
-pip install pyinstaller
-pyinstaller --onefile --windowed --name "FileChanger" main.py
-```
-
-The `.exe` will be in the `dist/` folder. No Python required on the target machine.
+> LibreOffice must be installed: https://www.libreoffice.org/download/
 
 ---
 
@@ -64,20 +47,24 @@ The `.exe` will be in the `dist/` folder. No Python required on the target machi
 
 ```
 File-Type-Changer/
-├── app.py            # UI — CustomTkinter window, layout, events
-├── converter.py      # Core logic — Office COM automation + security checks
-├── main.py           # Entry point
-├── launch.bat        # One-click launcher (Windows)
-└── requirements.txt  # Dependencies
+├── streamlit_app.py   # Web app (Streamlit)
+├── app.py             # Desktop app (CustomTkinter, Windows only)
+├── converter.py       # Desktop converter logic
+├── main.py            # Desktop entry point
+├── launch.bat         # Desktop one-click launcher
+├── requirements.txt   # Python dependencies
+├── packages.txt       # System packages (LibreOffice for Streamlit Cloud)
+└── README.md
 ```
 
 ## Dependencies
 
 | Package | Purpose |
 |---------|---------|
-| `customtkinter` | Modern Tkinter UI framework |
-| `comtypes` | Windows COM automation (controls Word/PowerPoint) |
-| `pillow` | Image support for CustomTkinter |
+| `streamlit` | Web UI framework |
+| `libreoffice` | File conversion engine (server-side) |
+| `customtkinter` | Desktop UI (Windows only) |
+| `comtypes` | Windows COM automation (Desktop only) |
 
 ---
 

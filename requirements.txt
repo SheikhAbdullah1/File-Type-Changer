@@ -1,3 +1,1 @@
-comtypes
-customtkinter
-pillow
+streamlit>=1.32.0
