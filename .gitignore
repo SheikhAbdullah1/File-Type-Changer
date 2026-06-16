@@ -18,6 +18,11 @@ build/
 
 # VS Code
 .vscode/
+Untitled/
+launch.bat/
+package.txt/
+TESTING_CHECKLIST.md
+README.md
 
 # OS files
 .DS_Store
