@@ -8,7 +8,8 @@ Batch convert Word and PowerPoint files to PDF, DOCX, PPTX — free, no installa
 
 ## 🚀 Live Demo
 
-👉 **[Click here to use the app](https://file-type-changer.streamlit.app)**
+👉 **[Click here to use the app]
+(https://file-type-changer.streamlit.app)
 
 ---
 
